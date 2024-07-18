@@ -10,6 +10,7 @@ That's it — really. If you want more customization options, keep reading. Othe
 
 > [!warning] `/livewire/livewire.js` returning a 404 status code
 > By default, Livewire exposes a route in your application to serve its JavaScript assets from: `/livewire/livewire.js`. This is fine for most applications, however, if you are using Nginx with a custom configuration, you may receive a 404 from this endpoint. To fix this issue, you can either [compile Livewire's JavaScript assets yourself](#manually-bundling-livewire-and-alpine), or [configure Nginx to allow for this](https://benjamincrozat.com/livewire-js-404-not-found).
+> Additionally, when your application is in production, Livewire will serve a minified version of its JavaScript from the `/livewire/livewire.min.js` route instead. This behavior is controlled by the `app.debug` configuration. When it is set to false, the .min route is used.
 
 ## Publishing the configuration file
 
